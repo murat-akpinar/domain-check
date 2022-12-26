@@ -1,10 +1,21 @@
 #!/bin/bash
 
+
+REQUIRED_PKG="whois"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG | grep --color=always "install ok installed")
+echo "Kontrol ediliyor.." $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+  echo "Whois yüklü değil değil"
+  echo -e "\033[31msudo apt-get --yes install\033[0m" $REQUIRED_PKG
+exit
+
+fi
+
 echo "Sorgulamak İstediğiniz Domaini girin..:"
 read domain
 
 
-uzanti=('.com' '.com.tr' '.net' '.org' '.info' '.name' '.me' '.pro' '.tv' '.cc' ) # Daha fazla uzantı ekleyebilirsiniz
+uzanti=('.com' '.com.tr' )
 uzantilar=${#uzanti[@]}
 
 
