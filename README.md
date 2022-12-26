@@ -10,8 +10,8 @@ Uzantı bölümünden istediğiniz domain uzantılarını ekleyeblirsiniz şuan 
 
 Dosyayı indirdiğinizde; 
 ```bash
-chmod +=x domain-check.sh
+sudo chmod 775 domain-check.sh
 ```
 yaparak çalıştırma izini vermeyi unutmayın..
 
-./domain.check yaparak çalıştıraiblirsiniz 
+./domain.check.sh yaparak çalıştıraiblirsiniz 
