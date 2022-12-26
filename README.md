@@ -5,7 +5,7 @@ Bu shell script "whois" ile çalışıyor o yüzden sisteminizde whois yüklü o
 sudo apt update
 sudo apt install whois
 ```
-Domain yazarken uzantı girmenze gerek yok içirisinde domainler ekli oradan ilave edebilir veya silebilir siniz
+Domain yazarken uzantı girmenze gerek yok içirisinde bir kısım domain uzantısı ekli oradan ilave edebilir veya silebilir siniz.
 Uzantı bölümünden istediğiniz domain uzantılarını ekleyeblirsiniz şuan "('.com' '.com.tr' '.net' '.org' '.info' '.name' '.me' '.pro' '.tv' '.cc' )"  bunlar var.
 
 Dosyayı indirdiğinizde; 
