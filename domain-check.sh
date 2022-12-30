@@ -22,10 +22,11 @@ uzantilar=${#uzanti[@]}
   for (( i=0;i<$uzantilar;i++)); do
       whois ${domain,,}${uzanti[${i}]} | egrep -q '^No match|^NOT FOUND|^Not fo|AVAILABLE|^No Data Fou|has not been regi|No entri|DOMAIN NOT FOUND'
           if [ $? -eq 0 ]; then
-              echo "${domain,,}${uzanti[${i}]} : Alıma Müsait"
+              echo -e "\033[32mAlıma Müsait :\033[0m" ${domain,,}${uzanti[${i}]}
               whois ${domain,,}${uzanti[${i}]} | grep 'Expir' | awk -F ':' '{print $2}'
           else
-                echo "${domain,,}${uzanti[${i}]} : Alıma Müsait Değil"
+                echo -e "\033[31mAlıma Müsait Değil :\033[0m" ${domain,,}${uzanti[${i}]}
                echo "Bitiş Tarihi.: " && whois ${domain,,}${uzanti[${i}]} | grep 'Expir' | awk -F ':' '{print $2}'
           fi
  done
+
