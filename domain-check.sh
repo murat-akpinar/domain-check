@@ -15,7 +15,7 @@ echo "Sorgulamak İstediğiniz Domaini girin..:"
 read domain
 
 
-uzanti=('.com' '.com.tr' )
+uzanti=('.com' '.com.tr' '.net' '.org' '.info' '.name' '.me' '.pro' '.tv' '.cc' )
 uzantilar=${#uzanti[@]}
 
 
